@@ -1,0 +1,23 @@
+Running on node: cx21
+Mon Nov 11 17:47:22 CET 2024
+-- ARCH: x86_64
+-- Using the multi-header code from /hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx21/_deps/nlohmann_json-src/include/
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx21
+Consolidate compiler generated dependencies of target nested_loop_join
+Consolidate compiler generated dependencies of target hash_join
+Consolidate compiler generated dependencies of target perf-cpp
+[ 16%] Built target hash_join
+[ 16%] Building CXX object src/lib/CMakeFiles/nested_loop_join.dir/nested_loop_join.cpp.o
+[ 61%] Built target perf-cpp
+Consolidate compiler generated dependencies of target benchmark_runner
+[ 83%] Built target benchmark_runner
+[ 88%] Linking CXX static library libnested_loop_join.a
+[ 88%] Built target nested_loop_join
+Consolidate compiler generated dependencies of target join_benchmark
+[ 94%] Building CXX object src/benchmark/CMakeFiles/join_benchmark.dir/join_benchmark.cpp.o
+[100%] Linking CXX executable ../../benchmark/join_benchmark
+[100%] Built target join_benchmark
+success
+Mon Nov 11 17:48:48 CET 2024

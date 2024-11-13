@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --account=rabl
+#SBATCH --partition=magic
+#SBATCH --nodelist=cx01,cx02,cx03,cx04,cx05,cx06,cx07,cx08
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=72
+#SBATCH --time=1:00:00
+#SBATCH --container-image=/hpi/fs00/share/fg-rabl/delab-images/x86_ubuntu22_04.sqsh
+#SBATCH --container-mounts=/hpi/fs00/home/fabian.mahling/DE-Lab-Base:/hpi/fs00/home/fabian.mahling/DE-Lab-Base
+#SBATCH --output=/hpi/fs00/home/fabian.mahling/DE-Lab-Base/results/join_benchmark3/INTEL2/output.log
+#SBATCH --error=/hpi/fs00/home/fabian.mahling/DE-Lab-Base/results/join_benchmark3/INTEL2/error.log
+
+
+bash /hpi/fs00/home/fabian.mahling/DE-Lab-Base/scripts/delab_benchmark_pipeline.sh INTEL2 join_benchmark join_benchmark3 --build_size=1,10,100

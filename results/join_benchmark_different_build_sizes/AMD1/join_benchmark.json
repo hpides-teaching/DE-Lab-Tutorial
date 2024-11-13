@@ -1,0 +1,356 @@
+{
+    "results": [
+        {
+            "config": {
+                "algo": "hash",
+                "build_size": 1,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.007588455494469961,
+                "L1-dcache-load-misses": 0.06588707851207079,
+                "L1-dcache-loads": 8.682541336650862,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.005550723627099014,
+                "cache-references": 0.1313149394737636,
+                "cpu-clock": 12.243139626443124,
+                "cycles": 27.38749323501929,
+                "cycles-per-instruction": 1.7483703763483356,
+                "dTLB-load-misses": 0.0010340327970918693,
+                "instructions": 15.664583205888611,
+                "page-faults": 5.996478758361571e-08
+            },
+            "runtime": 1225286
+        },
+        {
+            "config": {
+                "algo": "hash_inverted",
+                "build_size": 1,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.0477791697654629,
+                "L1-dcache-load-misses": 6.5728500461973045,
+                "L1-dcache-loads": 137.56727206567075,
+                "alignment-faults": 0.0,
+                "cache-misses": 8.421404423365747,
+                "cache-references": 12.495314510391673,
+                "cpu-clock": 432.55382565422804,
+                "cycles": 1465.3848282115296,
+                "cycles-per-instruction": 6.156180556645625,
+                "dTLB-load-misses": 3.7425217583272827,
+                "instructions": 238.03473837843174,
+                "page-faults": 0.008860769838786925
+            },
+            "runtime": 43328540
+        },
+        {
+            "config": {
+                "algo": "nested_loop",
+                "build_size": 1,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.03129338245482912,
+                "L1-dcache-load-misses": 0.06267303006171615,
+                "L1-dcache-loads": 2.0027566579669815,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.001499414933922032,
+                "cache-references": 0.12498553898608626,
+                "cpu-clock": 1.2350050072000744,
+                "cycles": 4.181496004467579,
+                "cycles-per-instruction": 0.29864875433263544,
+                "dTLB-load-misses": 0.0009953929840363605,
+                "instructions": 14.001384381500626,
+                "page-faults": 0.0
+            },
+            "runtime": 123782
+        },
+        {
+            "config": {
+                "algo": "nested_loop_inverted",
+                "build_size": 1,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.29890869630479583,
+                "L1-dcache-load-misses": 0.06403219841318344,
+                "L1-dcache-loads": 0.21421992469529927,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.0012334619530700286,
+                "cache-references": 0.12421562864759536,
+                "cpu-clock": 0.32939531800711197,
+                "cycles": 0.9336597845535013,
+                "cycles-per-instruction": 0.7623427257852392,
+                "dTLB-load-misses": 0.0003755323431203405,
+                "instructions": 1.224724461811844,
+                "page-faults": 0.0
+            },
+            "runtime": 32972
+        },
+        {
+            "config": {
+                "algo": "hash",
+                "build_size": 10,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.003971405197629902,
+                "L1-dcache-load-misses": 0.07330084291653183,
+                "L1-dcache-loads": 18.45715540692677,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.012132049295451218,
+                "cache-references": 0.15231870402569975,
+                "cpu-clock": 15.66025587853963,
+                "cycles": 53.033938947664616,
+                "cycles-per-instruction": 2.0467996071833494,
+                "dTLB-load-misses": 0.0010419026641116148,
+                "instructions": 25.910665001859126,
+                "page-faults": 0.0
+            },
+            "runtime": 1567443
+        },
+        {
+            "config": {
+                "algo": "hash_inverted",
+                "build_size": 10,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.04753125732749947,
+                "L1-dcache-load-misses": 6.6214503365825115,
+                "L1-dcache-loads": 139.30728343581256,
+                "alignment-faults": 0.0,
+                "cache-misses": 8.380758924388829,
+                "cache-references": 12.70691291644507,
+                "cpu-clock": 429.37532639302407,
+                "cycles": 1454.5801272663875,
+                "cycles-per-instruction": 5.964493283977234,
+                "dTLB-load-misses": 3.772543270278981,
+                "instructions": 243.87321068395048,
+                "page-faults": 0.00879698140322221
+            },
+            "runtime": 43021198
+        },
+        {
+            "config": {
+                "algo": "nested_loop",
+                "build_size": 10,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.015704827600845808,
+                "L1-dcache-load-misses": 0.06288824263852676,
+                "L1-dcache-loads": 4.004389238576539,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.0019574559232776855,
+                "cache-references": 0.12562307811503579,
+                "cpu-clock": 2.6793843498708156,
+                "cycles": 9.071248552806471,
+                "cycles-per-instruction": 0.21085808932212105,
+                "dTLB-load-misses": 0.001004067494831602,
+                "instructions": 43.02063336516637,
+                "page-faults": 0.0
+            },
+            "runtime": 268294
+        },
+        {
+            "config": {
+                "algo": "nested_loop_inverted",
+                "build_size": 10,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.28542243352668223,
+                "L1-dcache-load-misses": 0.6373641785432851,
+                "L1-dcache-loads": 2.2330556525217986,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.014386675252203777,
+                "cache-references": 1.2560522181407416,
+                "cpu-clock": 3.1304453835493784,
+                "cycles": 10.421577714922677,
+                "cycles-per-instruction": 0.8037429490811293,
+                "dTLB-load-misses": 0.009797532269196696,
+                "instructions": 12.9663068607159,
+                "page-faults": 0.0
+            },
+            "runtime": 313773
+        },
+        {
+            "config": {
+                "algo": "hash",
+                "build_size": 100,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.0036586395269118774,
+                "L1-dcache-load-misses": 0.08147088444392464,
+                "L1-dcache-loads": 22.268081849728226,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.012231080113017826,
+                "cache-references": 0.17719860536843568,
+                "cpu-clock": 17.551062028287728,
+                "cycles": 59.47370677267744,
+                "cycles-per-instruction": 2.176713006237508,
+                "dTLB-load-misses": 0.0010567565923011283,
+                "instructions": 27.3227139279509,
+                "page-faults": 0.0
+            },
+            "runtime": 1757091
+        },
+        {
+            "config": {
+                "algo": "hash_inverted",
+                "build_size": 100,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.047518155393121916,
+                "L1-dcache-load-misses": 6.697080829675616,
+                "L1-dcache-loads": 140.9373064730748,
+                "alignment-faults": 0.0,
+                "cache-misses": 8.381878309369277,
+                "cache-references": 12.715420888932899,
+                "cpu-clock": 428.09739229399497,
+                "cycles": 1449.8780747291703,
+                "cycles-per-instruction": 5.829331942405971,
+                "dTLB-load-misses": 3.7467610660161608,
+                "instructions": 248.7211380401773,
+                "page-faults": 0.008761269537765844
+            },
+            "runtime": 42858218
+        },
+        {
+            "config": {
+                "algo": "nested_loop",
+                "build_size": 100,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.0029766269535066664,
+                "L1-dcache-load-misses": 0.07185843656541502,
+                "L1-dcache-loads": 24.140894269858357,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.006652054397299607,
+                "cache-references": 0.1517396647758175,
+                "cpu-clock": 14.863136749656627,
+                "cycles": 50.31266393200128,
+                "cycles-per-instruction": 0.3096885522761485,
+                "dTLB-load-misses": 0.0003680195688020685,
+                "instructions": 162.4621367571172,
+                "page-faults": 0.0
+            },
+            "runtime": 1487985
+        },
+        {
+            "config": {
+                "algo": "nested_loop_inverted",
+                "build_size": 100,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.2912935654074573,
+                "L1-dcache-load-misses": 6.277966113537797,
+                "L1-dcache-loads": 21.552024689444366,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.12311270771461703,
+                "cache-references": 12.520452132732034,
+                "cpu-clock": 29.64617922913331,
+                "cycles": 100.25016973966508,
+                "cycles-per-instruction": 0.7883856329211434,
+                "dTLB-load-misses": 0.09843117932501308,
+                "instructions": 127.15879837664723,
+                "page-faults": 0.0
+            },
+            "runtime": 2971723
+        },
+        {
+            "config": {
+                "algo": "hash",
+                "build_size": 1000,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.03616940767380909,
+                "L1-dcache-load-misses": 0.8961947754226731,
+                "L1-dcache-loads": 24.77770118617739,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.010214579859897866,
+                "cache-references": 1.0002347326148726,
+                "cpu-clock": 18.856284684874364,
+                "cycles": 63.854280355823555,
+                "cycles-per-instruction": 2.2352701183138453,
+                "dTLB-load-misses": 0.0010402744366395848,
+                "instructions": 28.566695287812205,
+                "page-faults": 1.4981773671288452e-08
+            },
+            "runtime": 1887562
+        },
+        {
+            "config": {
+                "algo": "hash_inverted",
+                "build_size": 1000,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.04745479254572567,
+                "L1-dcache-load-misses": 6.682056342711519,
+                "L1-dcache-loads": 140.80888323919947,
+                "alignment-faults": 0.0,
+                "cache-misses": 8.341689781081776,
+                "cache-references": 12.870775603504542,
+                "cpu-clock": 427.59668158334,
+                "cycles": 1448.3387266698853,
+                "cycles-per-instruction": 5.83998152641131,
+                "dTLB-load-misses": 3.7713220111817884,
+                "instructions": 248.00399112904296,
+                "page-faults": 0.008723655286986955
+            },
+            "runtime": 42888006
+        },
+        {
+            "config": {
+                "algo": "nested_loop",
+                "build_size": 1000,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.0011573021693252214,
+                "L1-dcache-load-misses": 0.2223771090784585,
+                "L1-dcache-loads": 192.15129373525505,
+                "alignment-faults": 0.0,
+                "cache-misses": 0.025610465968844642,
+                "cache-references": 0.35021832050963486,
+                "cpu-clock": 132.09277220232897,
+                "cycles": 447.3579282641083,
+                "cycles-per-instruction": 0.3493037666997098,
+                "dTLB-load-misses": 0.001196113311932352,
+                "instructions": 1280.713152597332,
+                "page-faults": 0.0
+            },
+            "runtime": 13220401
+        },
+        {
+            "config": {
+                "algo": "nested_loop_inverted",
+                "build_size": 1000,
+                "probe_size": 100000000
+            },
+            "perf": {
+                "L1-data-miss-ratio": 0.2937202222685432,
+                "L1-dcache-load-misses": 62.792466793999054,
+                "L1-dcache-loads": 213.78326050900577,
+                "alignment-faults": 0.0,
+                "cache-misses": 1.2165357612757377,
+                "cache-references": 125.11328024442197,
+                "cpu-clock": 289.5022256091665,
+                "cycles": 979.3592266486179,
+                "cycles-per-instruction": 0.7725504520303299,
+                "dTLB-load-misses": 0.3406035636036925,
+                "instructions": 1267.6961408472114,
+                "page-faults": 0.0
+            },
+            "runtime": 29016836
+        }
+    ]
+}
