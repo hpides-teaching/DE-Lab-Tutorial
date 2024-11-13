@@ -1,4 +1,4 @@
-# DE-Lab-Base
+# DE-Lab-Tutorial
 This repository contains a small framework to run C++ (benchmarks) on the DE-Lab.
 
 Supported features are:
