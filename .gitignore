@@ -1,0 +1,5 @@
+cmake-*
+results/*
+
+.vscode
+*.pyc

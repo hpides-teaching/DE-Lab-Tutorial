@@ -1,5 +1,3 @@
 #include "benchmark_runner.hpp"
 
-BenchmarkRunner::BenchmarkRunner()
-{
-}
+BenchmarkRunner::BenchmarkRunner() {}
