@@ -1,5 +1,10 @@
 #include "perf_wrapper.hpp"
 
+#include <iostream>
+#include <memory>
+#include <string>
+#include <vector>
+
 PerfWrapper::PerfWrapper() {
   // if (!perf::HardwareInfo::is_intel())
   //{
@@ -29,7 +34,7 @@ void PerfWrapper::initialize() {
 
   if (!event_counter.value().add(default_counters)) {
     throw std::runtime_error("Unable to load default Counters.");
-  };
+  }
 }
 
 // Creates the perf events/resets the counters and starts them
@@ -46,7 +51,7 @@ void PerfWrapper::start() {
     std::cout << "Check for defined counter support on the used system!" << std::endl;
     throw std::runtime_error("Something went wrong during profiling start");
   }
-};
+}
 
 void PerfWrapper::stop() {
   if (!event_counter.has_value()) {
@@ -55,7 +60,7 @@ void PerfWrapper::stop() {
         "initialize() has been called.");
   }
   event_counter.value().stop();
-};
+}
 
 perf::CounterResult PerfWrapper::result(std::uint64_t normalization) {
   if (!event_counter.has_value()) {
@@ -64,7 +69,7 @@ perf::CounterResult PerfWrapper::result(std::uint64_t normalization) {
         "initialize() has been called.");
   }
   return event_counter.value().result(normalization);
-};
+}
 
 void PerfWrapper::result(nlohmann::json& results, std::uint64_t normalization) {
   result(results, "", normalization);

@@ -1,8 +1,6 @@
 import os
 import json
 import pandas as pd
-import copy
-import matplotlib.pyplot as plt
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "results")
 

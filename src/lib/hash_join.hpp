@@ -1,5 +1,8 @@
+#pragma once
+
 #include <cstdint>
 #include <unordered_map>
+#include <vector>
 
 #include "join.hpp"
 
@@ -10,8 +13,8 @@ class HashJoin : public JoinOperator<ValueType> {
       : JoinOperator<ValueType>(build_side, probe_side) {}
 
   void build();
-  unsigned long probe();
-  unsigned long join() override;
+  uint64_t probe();
+  uint64_t join() override;
 
  private:
   std::unordered_map<ValueType, unsigned> _value_counts;

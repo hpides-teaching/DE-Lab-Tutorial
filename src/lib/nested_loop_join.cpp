@@ -1,8 +1,8 @@
 #include "nested_loop_join.hpp"
 
 template <class ValueType>
-unsigned long NestedLoopJoin<ValueType>::join() {
-  unsigned long matches = 0;
+uint64_t NestedLoopJoin<ValueType>::join() {
+  uint64_t matches = 0;
 
   // Perform nested loop join
   for (const auto& probe_val : this->_probe_side) {
@@ -14,6 +14,6 @@ unsigned long NestedLoopJoin<ValueType>::join() {
   }
 
   return matches;
-};
+}
 
 template class NestedLoopJoin<uint32_t>;

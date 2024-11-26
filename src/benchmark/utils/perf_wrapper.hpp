@@ -1,7 +1,13 @@
+#pragma once
+
 #include <perfcpp/event_counter.h>
 #include <perfcpp/hardware_info.h>
+
 #include <filesystem>
 #include <iostream>
+#include <string>
+#include <vector>
+
 #include <nlohmann/json.hpp>
 
 class PerfWrapper {

@@ -1,8 +1,10 @@
 #include <chrono>
 #include <cstddef>
 #include <fstream>
+#include <memory>
 #include <stdexcept>
 #include <string>
+#include <vector>
 
 #include "hash_join.hpp"
 #include "join.hpp"
@@ -45,7 +47,7 @@ void benchmark_join(JoinConfig& config, auto& results) {
   BenchmarkRunner::get().perf_wrapper.stop();
   BenchmarkRunner::get().perf_wrapper.result(results, config.probe_size);
   results["runtime"] = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
-};
+}
 
 int main(int argc, char** argv) {
   auto& benchmark_config = BenchmarkRunner::get().runtime_config;
@@ -53,10 +55,18 @@ int main(int argc, char** argv) {
 
   // clang-format off
     benchmark_config.add_options()
-        ("probe_size", "Number of elements in probe side", cxxopts::value<std::vector<size_t>>()->default_value("10000000"))
-        ("build_size", "Number of elements in build side", cxxopts::value<std::vector<size_t>>()->default_value("100"))
-        ("algo", "Algorithm to use (hash, hash_inverted, nested_loop, nested_loop_inverted)", cxxopts::value<std::vector<std::string>>()->default_value("hash,hash_inverted,nested_loop,nested_loop_inverted"))
-        ("out", "filename", cxxopts::value<std::vector<std::string>>()->default_value("join_benchmark.json"));
+        ("probe_size",
+              "Number of elements in probe side",
+              cxxopts::value<std::vector<size_t>>()->default_value("10000000"))
+        ("build_size",
+              "Number of elements in build side",
+              cxxopts::value<std::vector<size_t>>()->default_value("100"))
+        ("algo",
+              "Algorithm to use (hash, hash_inverted, nested_loop, nested_loop_inverted)",
+              cxxopts::value<std::vector<std::string>>()->default_value("hash,hash_inverted,nested_loop,nested_loop_inverted")) // NOLINT
+        ("out",
+              "filename",
+              cxxopts::value<std::vector<std::string>>()->default_value("join_benchmark.json"));
   // clang-format on
   benchmark_config.parse(argc, argv);
 

@@ -1,4 +1,5 @@
 #pragma once
+
 #include <vector>
 
 /*
@@ -10,8 +11,9 @@ template <class ValueType>
 class JoinOperator {
  public:
   JoinOperator(std::vector<ValueType>& build_side, std::vector<ValueType>& probe_side)
-      : _build_side(build_side), _probe_side(probe_side){};
-  virtual unsigned long join();
+      : _build_side(build_side), _probe_side(probe_side) {}
+
+  virtual uint64_t join();
 
   std::vector<ValueType>& _build_side;
   std::vector<ValueType>& _probe_side;

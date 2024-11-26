@@ -1,10 +1,8 @@
 # Disclaimer: Created using ChatGPT
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pandas as pd
 
-
-from helper import *
+from helper import load_results_benchmark_directory_to_pandas, DATA_DIR
 
 
 def plot_join_benchmark(metrics, labels):

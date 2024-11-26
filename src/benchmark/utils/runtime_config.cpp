@@ -1,7 +1,9 @@
 #include <unordered_map>
 
-#include "cxxopts.hpp"
+#include <string>
+#include <vector>
 
+#include "cxxopts.hpp"
 #include "runtime_config.hpp"
 
 std::vector<ConfigMap> unpack_configuration_cross_product(ParsingResultIterator parse_result_it,
