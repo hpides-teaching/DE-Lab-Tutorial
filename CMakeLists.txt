@@ -44,15 +44,11 @@ target_include_directories(cxxopts INTERFACE ${cxxopts_SOURCE_DIR}/include)
 
 FetchContent_Declare(
   perf-cpp-external
-  GIT_REPOSITORY "https://github.com/tratori/perf-cpp/"
-  GIT_TAG "v0.8.1"
+  GIT_REPOSITORY "https://github.com/jmuehlig/perf-cpp"
+  GIT_TAG "v0.8.3"
 )
 FetchContent_MakeAvailable(perf-cpp-external)
 
-target_compile_definitions(perf-cpp PUBLIC
-  NO_PERF_SAMPLE_WEIGHT_STRUCT
-  NO_PERF_SAMPLE_DATA_PAGE_SIZE
-  NO_PERF_SAMPLE_CODE_PAGE_SIZE
-)
+target_compile_options(perf-cpp PRIVATE -w) # GCC/Clang: -w disables all warnings for perf-cpp target
 
 add_subdirectory(src)
