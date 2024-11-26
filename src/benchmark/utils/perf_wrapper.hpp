@@ -18,7 +18,7 @@ class PerfWrapper {
   void stop();
   perf::CounterResult result(std::uint64_t normalization = 1U);
   void result(nlohmann::json& results, std::uint64_t normalization = 1U);
-  void result(nlohmann::json& results, std::string description, std::uint64_t normalization = 1U);
+  void result(nlohmann::json& results, const std::string& description, std::uint64_t normalization = 1U);
 
  private:
   std::optional<perf::EventCounter> event_counter;

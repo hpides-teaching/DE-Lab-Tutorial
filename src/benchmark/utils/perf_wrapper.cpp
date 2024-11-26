@@ -1,21 +1,30 @@
 #include "perf_wrapper.hpp"
 
+#include <perfcpp/config.h>
+#include <perfcpp/counter.h>
+#include <perfcpp/event_counter.h>
+
+#include <cstddef>
+#include <cstdint>
 #include <iostream>
-#include <memory>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
-PerfWrapper::PerfWrapper() {
-  // if (!perf::HardwareInfo::is_intel())
-  //{
-  //     default_counters.push_back("stalled-cycles-backend");
-  // }
-  //  if (!hostname.starts_with("ca"))
-  //{
-  //      default_counters.push_back("dTLB-loads");
-  //      default_counters.push_back("dTLB-miss-ratio");
-  //  }
-}
+#include <nlohmann/json.hpp>
+
+PerfWrapper::PerfWrapper() = default;
+
+// Some possible edge cases encountered on DE-Lab that could be handled in constructor:
+// if (!perf::HardwareInfo::is_intel())
+//{
+//     default_counters.push_back("stalled-cycles-backend");
+// }
+//  if (!hostname.starts_with("ca"))
+//{
+//      default_counters.push_back("dTLB-loads");
+//      default_counters.push_back("dTLB-miss-ratio");
+//  }
 
 void PerfWrapper::initialize() {
   if (event_counter.has_value()) {
@@ -28,7 +37,7 @@ void PerfWrapper::initialize() {
 
   event_counter.emplace(counter_definition, config);
 
-  if (default_counters.size() > config.max_counters_per_group() * config.max_groups()) {
+  if (default_counters.size() > static_cast<size_t>(config.max_counters_per_group()) * config.max_groups()) {
     throw std::runtime_error("Too many perf counters have been defined");
   }
 
@@ -75,11 +84,11 @@ void PerfWrapper::result(nlohmann::json& results, std::uint64_t normalization) {
   result(results, "", normalization);
 }
 
-void PerfWrapper::result(nlohmann::json& results, std::string description, std::uint64_t normalization) {
+void PerfWrapper::result(nlohmann::json& results, const std::string& description, std::uint64_t normalization) {
   auto counter_result = result(normalization);
   for (const auto& [counter_name, counter_value] : counter_result) {
-    std::string string_counter_name(counter_name);
-    if (description == "") {
+    const std::string string_counter_name(counter_name);
+    if (description.empty()) {
       results["perf"][string_counter_name] = counter_value;
     } else {
       results["perf"][description][string_counter_name] = counter_value;

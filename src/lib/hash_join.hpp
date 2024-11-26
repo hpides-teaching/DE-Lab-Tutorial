@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <memory>
 #include <unordered_map>
 #include <vector>
 
@@ -9,7 +10,7 @@
 template <class ValueType>
 class HashJoin : public JoinOperator<ValueType> {
  public:
-  HashJoin(std::vector<ValueType>& build_side, std::vector<ValueType>& probe_side)
+  HashJoin(std::shared_ptr<std::vector<ValueType>> build_side, std::shared_ptr<std::vector<ValueType>> probe_side)
       : JoinOperator<ValueType>(build_side, probe_side) {}
 
   void build();

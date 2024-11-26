@@ -10,8 +10,4 @@ class BenchmarkRunner : public Singleton<BenchmarkRunner> {
  public:
   RuntimeConfig runtime_config;
   PerfWrapper perf_wrapper;
-
- private:
-  BenchmarkRunner();
-  friend class Singleton;
 };

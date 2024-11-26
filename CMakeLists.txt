@@ -49,6 +49,17 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(perf-cpp-external)
 
+set(ENABLE_CLANG_TIDY OFF CACHE BOOL "Run clang-tidy")
+if (ENABLE_CLANG_TIDY)
+  include_directories(${nlohmann_json_SOURCE_DIR}/single_include) # tidy-clang otherwise wont be able to find corresponding headers.
+  set(CMAKE_CXX_CLANG_TIDY
+    clang-tidy;
+    -format-style='file';
+    -config-file=${CMAKE_CURRENT_SOURCE_DIR}/.clang-tidy;
+    -header-filter=${CMAKE_CURRENT_SOURCE_DIR}/src/;
+  )
+endif()
+
 target_compile_options(perf-cpp PRIVATE -w) # GCC/Clang: -w disables all warnings for perf-cpp target
 
 add_subdirectory(src)

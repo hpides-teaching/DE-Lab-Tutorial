@@ -1,16 +1,22 @@
 #include <chrono>
 #include <cstddef>
+#include <cstdint>
 #include <fstream>
 #include <memory>
+#include <ostream>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
+#include <nlohmann/json.hpp>
+
+#include "cxxopts.hpp"
 #include "hash_join.hpp"
 #include "join.hpp"
 #include "nested_loop_join.hpp"
 #include "utils/benchmark_runner.hpp"
 #include "utils/column_generator.hpp"
+#include "utils/runtime_config.hpp"
 
 using value_type = uint32_t;
 
@@ -42,7 +48,7 @@ void benchmark_join(JoinConfig& config, auto& results) {
   BenchmarkRunner::get().perf_wrapper.start();
   auto start = std::chrono::high_resolution_clock::now();
   auto join_count = join_operator->join();
-  asm volatile("" : "+r,m"(join_count) : : "memory");  // Please don't optimize away.
+  asm volatile("" : "+r,m"(join_count) : : "memory");  // Please don't optimize away. // NOLINT
   auto end = std::chrono::high_resolution_clock::now();
   BenchmarkRunner::get().perf_wrapper.stop();
   BenchmarkRunner::get().perf_wrapper.result(results, config.probe_size);

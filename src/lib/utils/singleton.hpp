@@ -4,13 +4,15 @@
 // https://github.com/hyrise/hyrise/blob/master/src/lib/utils/singleton.hpp ---
 
 class Noncopyable {
+ public:
+  Noncopyable(const Noncopyable&) = delete;
+  const Noncopyable& operator=(const Noncopyable&) = delete;
+
  protected:
   Noncopyable() = default;
   Noncopyable(Noncopyable&&) noexcept = default;
   Noncopyable& operator=(Noncopyable&&) noexcept = default;
   ~Noncopyable() = default;
-  Noncopyable(const Noncopyable&) = delete;
-  const Noncopyable& operator=(const Noncopyable&) = delete;
 };
 
 // Singleton implementation à la Scott Meyers.
@@ -28,13 +30,15 @@ class Singleton : public Noncopyable {
     return instance;
   }
 
-  virtual ~Singleton() {}
+  virtual ~Singleton() = default;
+  Singleton(const Singleton&) = delete;
+  Singleton& operator=(const Singleton&) = delete;
+  Singleton(Singleton&&) noexcept = default;
+  Singleton& operator=(Singleton&&) noexcept = default;
 
  protected:
   // If you need to overwrite the constructor make sure to friend this Singleton
   // class. Otherwise it cannot call the protected constructor of a derived
   // class.
-  Singleton() {}
-
-  Singleton& operator=(Singleton&&) = default;
+  Singleton() = default;
 };

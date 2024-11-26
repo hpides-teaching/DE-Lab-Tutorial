@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <vector>
 
 /*
@@ -10,13 +11,17 @@
 template <class ValueType>
 class JoinOperator {
  public:
-  JoinOperator(std::vector<ValueType>& build_side, std::vector<ValueType>& probe_side)
+  JoinOperator(std::shared_ptr<std::vector<ValueType>> build_side, std::shared_ptr<std::vector<ValueType>> probe_side)
       : _build_side(build_side), _probe_side(probe_side) {}
 
   virtual ~JoinOperator() = default;
+  JoinOperator(const JoinOperator&) = delete;
+  JoinOperator& operator=(const JoinOperator&) = delete;
+  JoinOperator(JoinOperator&& other) noexcept = default;
+  JoinOperator& operator=(JoinOperator&& other) noexcept = default;
 
   virtual uint64_t join() = 0;
 
-  std::vector<ValueType>& _build_side;
-  std::vector<ValueType>& _probe_side;
+  std::shared_ptr<std::vector<ValueType>> _build_side;
+  std::shared_ptr<std::vector<ValueType>> _probe_side;
 };
