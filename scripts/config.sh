@@ -38,7 +38,7 @@ additional_config["INTEL3"]=""
 
 partitions["AMD1"]="magic"
 nodenames["AMD1"]="cx21,cx22,cx23,cx24,cx25,cx26,cx27,cx28"
-num_cpus["AMD1"]="256"
+num_cpus["AMD1"]="128"
 arch["AMD1"]="x86_64"
 additional_config["AMD1"]=""
 
