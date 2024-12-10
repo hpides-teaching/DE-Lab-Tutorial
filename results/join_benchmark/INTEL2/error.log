@@ -1,0 +1,161 @@
+In file included from /hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:2:
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h: In constructor 'perf::Sampler::Sampler(const perf::CounterDefinition&, const std::string&, uint64_t, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:323:70: warning: 'perf::Sampler::Sampler(const perf::CounterDefinition&, std::string&&, uint64_t, perf::SampleConfig)' is deprecated: Creating samplers with counters and sampling type will be replaced by Sampler::trigger() and Sampler::values() interfaces. [-Wdeprecated-declarations]
+  323 |     : Sampler(counter_list, std::string{ counter_name }, type, config)
+      |                                                                      ^
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:328:51: note: declared here
+  328 |                "Sampler::values() interfaces.")]] Sampler(const CounterDefinition& counter_list,
+      |                                                   ^~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h: In constructor 'perf::Sampler::Sampler(const perf::CounterDefinition&, std::string&&, uint64_t, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:332:94: warning: 'perf::Sampler::Sampler(const perf::CounterDefinition&, std::vector<std::__cxx11::basic_string<char> >&&, uint64_t, perf::SampleConfig)' is deprecated: Creating samplers with counters and sampling type will be replaced by Sampler::trigger() and Sampler::values() interfaces. [-Wdeprecated-declarations]
+  332 |     : Sampler(counter_list, std::vector<std::string>{ std::move(counter_name) }, type, config)
+      |                                                                                              ^
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:337:51: note: declared here
+  337 |                "Sampler::values() interfaces.")]] Sampler(const CounterDefinition& counter_list,
+      |                                                   ^~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h: In constructor 'perf::MultiThreadSampler::MultiThreadSampler(const perf::CounterDefinition&, const std::string&, uint64_t, uint16_t, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:878:94: warning: 'perf::MultiThreadSampler::MultiThreadSampler(const perf::CounterDefinition&, std::string&&, uint64_t, uint16_t, perf::SampleConfig)' is deprecated: Creating samplers with counters and sampling type will be replaced by MultiThreadSampler::trigger() and MultiThreadSampler::values() interfaces. [-Wdeprecated-declarations]
+  878 |     : MultiThreadSampler(counter_list, std::string{ counter_name }, type, num_threads, config)
+      |                                                                                              ^
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:884:55: note: declared here
+  884 |     "and MultiThreadSampler::values() interfaces.")]] MultiThreadSampler(const CounterDefinition& counter_list,
+      |                                                       ^~~~~~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h: In constructor 'perf::MultiThreadSampler::MultiThreadSampler(const perf::CounterDefinition&, std::string&&, uint64_t, uint16_t, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:889:118: warning: 'perf::MultiThreadSampler::MultiThreadSampler(const perf::CounterDefinition&, std::vector<std::__cxx11::basic_string<char> >&&, uint64_t, uint16_t, perf::SampleConfig)' is deprecated: Creating samplers with counters and sampling type will be replaced by MultiThreadSampler::trigger() and MultiThreadSampler::values() interfaces. [-Wdeprecated-declarations]
+  889 |     : MultiThreadSampler(counter_list, std::vector<std::string>{ std::move(counter_name) }, type, num_threads, config)
+      |                                                                                                                      ^
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:895:55: note: declared here
+  895 |     "and MultiThreadSampler::values() interfaces.")]] MultiThreadSampler(const CounterDefinition& counter_list,
+      |                                                       ^~~~~~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h: In constructor 'perf::MultiCoreSampler::MultiCoreSampler(const perf::CounterDefinition&, const std::string&, uint64_t, std::vector<short unsigned int>&&, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:1084:100: warning: 'perf::MultiCoreSampler::MultiCoreSampler(const perf::CounterDefinition&, std::string&&, uint64_t, std::vector<short unsigned int>&&, perf::SampleConfig)' is deprecated: Creating samplers with counters and sampling type will be replaced by MultiCoreSampler::trigger() and MultiCoreSampler::values() interfaces from v.0.9.0. [-Wdeprecated-declarations]
+ 1084 |     : MultiCoreSampler(counter_list, std::string{ counter_name }, type, std::move(core_ids), config)
+      |                                                                                                    ^
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:1090:62: note: declared here
+ 1090 |     "MultiCoreSampler::values() interfaces from v.0.9.0.")]] MultiCoreSampler(const CounterDefinition& counter_list,
+      |                                                              ^~~~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h: In constructor 'perf::MultiCoreSampler::MultiCoreSampler(const perf::CounterDefinition&, std::string&&, uint64_t, std::vector<short unsigned int>&&, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:1099:30: warning: 'perf::MultiCoreSampler::MultiCoreSampler(const perf::CounterDefinition&, std::vector<std::__cxx11::basic_string<char> >&&, uint64_t, std::vector<short unsigned int>&&, perf::SampleConfig)' is deprecated: Creating samplers with counters and sampling type will be replaced by MultiCoreSampler::trigger() and MultiCoreSampler::values() interfaces from v.0.9.0. [-Wdeprecated-declarations]
+ 1099 |                        config)
+      |                              ^
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:1105:62: note: declared here
+ 1105 |     "MultiCoreSampler::values() interfaces from v.0.9.0.")]] MultiCoreSampler(const CounterDefinition& counter_list,
+      |                                                              ^~~~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp: In constructor 'perf::Sampler::Sampler(const perf::CounterDefinition&, std::vector<std::__cxx11::basic_string<char> >&&, uint64_t, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:27:52: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+   27 |     .data_page_size(static_cast<bool>(type & Type::DataPageSize))
+      |                                                    ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:28:52: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+   28 |     .code_page_size(static_cast<bool>(type & Type::CodePageSize))
+      |                                                    ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:29:51: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+   29 |     .weight_struct(static_cast<bool>(type & Type::WeightStruct));
+      |                                                   ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:32:46: warning: 'uint16_t perf::Config::max_stack() const' is deprecated: Will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+   32 |     _values.callchain(this->_config.max_stack());
+      |                       ~~~~~~~~~~~~~~~~~~~~~~~^~
+In file included from /hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:3:
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:23:3: note: declared here
+   23 |   max_stack() const noexcept
+      |   ^~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:36:46: warning: 'uint64_t perf::SampleConfig::branch_type() const' is deprecated: Kernel Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+   36 |     _values._branch_mask = config.branch_type();
+      |                            ~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:109:3: note: declared here
+  109 |   branch_type() const noexcept
+      |   ^~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:41:49: warning: 'perf::Registers perf::SampleConfig::user_registers() const' is deprecated: User Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+   41 |     _values.user_registers(config.user_registers());
+      |                            ~~~~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:97:3: note: declared here
+   97 |   user_registers() const noexcept
+      |   ^~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:45:53: warning: 'perf::Registers perf::SampleConfig::kernel_registers() const' is deprecated: Kernel Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+   45 |     _values.kernel_registers(config.kernel_registers());
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:103:3: note: declared here
+  103 |   kernel_registers() const noexcept
+      |   ^~~~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp: In constructor 'perf::MultiThreadSampler::MultiThreadSampler(const perf::CounterDefinition&, std::vector<std::__cxx11::basic_string<char> >&&, uint64_t, uint16_t, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:802:61: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+  802 |     .data_page_size(static_cast<bool>(type & Sampler::Type::DataPageSize))
+      |                                                             ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:803:61: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+  803 |     .code_page_size(static_cast<bool>(type & Sampler::Type::CodePageSize))
+      |                                                             ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:804:60: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+  804 |     .weight_struct(static_cast<bool>(type & Sampler::Type::WeightStruct));
+      |                                                            ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:807:46: warning: 'uint64_t perf::SampleConfig::branch_type() const' is deprecated: Kernel Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+  807 |     _values._branch_mask = config.branch_type();
+      |                            ~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:109:3: note: declared here
+  109 |   branch_type() const noexcept
+      |   ^~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:812:49: warning: 'perf::Registers perf::SampleConfig::user_registers() const' is deprecated: User Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+  812 |     _values.user_registers(config.user_registers());
+      |                            ~~~~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:97:3: note: declared here
+   97 |   user_registers() const noexcept
+      |   ^~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:816:53: warning: 'perf::Registers perf::SampleConfig::kernel_registers() const' is deprecated: Kernel Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+  816 |     _values.kernel_registers(config.kernel_registers());
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:103:3: note: declared here
+  103 |   kernel_registers() const noexcept
+      |   ^~~~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp: In constructor 'perf::MultiCoreSampler::MultiCoreSampler(const perf::CounterDefinition&, std::vector<std::__cxx11::basic_string<char> >&&, uint64_t, std::vector<short unsigned int>&&, perf::SampleConfig)':
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:890:61: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+  890 |     .data_page_size(static_cast<bool>(type & Sampler::Type::DataPageSize))
+      |                                                             ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:891:61: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+  891 |     .code_page_size(static_cast<bool>(type & Sampler::Type::CodePageSize))
+      |                                                             ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:892:60: warning: 'Type' is deprecated: Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0. [-Wdeprecated-declarations]
+  892 |     .weight_struct(static_cast<bool>(type & Sampler::Type::WeightStruct));
+      |                                                            ^~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/sampler.h:28:99: note: declared here
+   28 |     [[deprecated("Sampler::Type will be replaced by Sampler::values() interface from v.0.9.0.")]] Type : std::uint64_t{
+      |                                                                                                   ^~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:895:46: warning: 'uint64_t perf::SampleConfig::branch_type() const' is deprecated: Kernel Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+  895 |     _values._branch_mask = config.branch_type();
+      |                            ~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:109:3: note: declared here
+  109 |   branch_type() const noexcept
+      |   ^~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:900:49: warning: 'perf::Registers perf::SampleConfig::user_registers() const' is deprecated: User Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+  900 |     _values.user_registers(config.user_registers());
+      |                            ~~~~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:97:3: note: declared here
+   97 |   user_registers() const noexcept
+      |   ^~~~~~~~~~~~~~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/src/sampler.cpp:904:53: warning: 'perf::Registers perf::SampleConfig::kernel_registers() const' is deprecated: Kernel Registers will be set through the Sampler::values() interface. [-Wdeprecated-declarations]
+  904 |     _values.kernel_registers(config.kernel_registers());
+      |                              ~~~~~~~~~~~~~~~~~~~~~~~^~
+/hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/perf-cpp-external-src/include/perfcpp/config.h:103:3: note: declared here
+  103 |   kernel_registers() const noexcept
+      |   ^~~~~~~~~~~~~~~~

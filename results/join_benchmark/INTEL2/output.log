@@ -1,0 +1,44 @@
+Running on node: cx08
+Mon Nov 11 16:53:23 CET 2024
+-- The C compiler identification is GNU 12.3.0
+-- The CXX compiler identification is GNU 12.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc-12 - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++-12 - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- ARCH: x86_64
+-- Using the multi-header code from /hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08/_deps/nlohmann_json-src/include/
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /hpi/fs00/home/fabian.mahling/DE-Lab-Base/cmake-build-release-cx08
+[  5%] Building CXX object src/lib/CMakeFiles/nested_loop_join.dir/nested_loop_join.cpp.o
+[ 27%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/counter_definition.cpp.o
+[ 27%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/sampler.cpp.o
+[ 27%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/counter.cpp.o
+[ 27%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/analyzer/data.cpp.o
+[ 33%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/group.cpp.o
+[ 50%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/hardware_info.cpp.o
+[ 50%] Building CXX object _deps/perf-cpp-external-build/CMakeFiles/perf-cpp.dir/src/event_counter.cpp.o
+[ 50%] Building CXX object src/lib/CMakeFiles/hash_join.dir/hash_join.cpp.o
+[ 55%] Linking CXX static library libnested_loop_join.a
+[ 61%] Linking CXX static library libhash_join.a
+[ 61%] Built target nested_loop_join
+[ 61%] Built target hash_join
+[ 66%] Linking CXX static library libperf-cpp.a
+[ 66%] Built target perf-cpp
+[ 72%] Building CXX object src/benchmark/utils/CMakeFiles/benchmark_runner.dir/perf_wrapper.cpp.o
+[ 83%] Building CXX object src/benchmark/utils/CMakeFiles/benchmark_runner.dir/runtime_config.cpp.o
+[ 83%] Building CXX object src/benchmark/utils/CMakeFiles/benchmark_runner.dir/benchmark_runner.cpp.o
+[ 88%] Linking CXX static library libbenchmark_runner.a
+[ 88%] Built target benchmark_runner
+[ 94%] Building CXX object src/benchmark/CMakeFiles/join_benchmark.dir/join_benchmark.cpp.o
+[100%] Linking CXX executable ../../benchmark/join_benchmark
+[100%] Built target join_benchmark
+success
+Mon Nov 11 16:53:59 CET 2024

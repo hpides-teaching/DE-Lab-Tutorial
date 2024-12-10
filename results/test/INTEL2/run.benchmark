@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --account=rabl
+#SBATCH --partition=magic
+#SBATCH --nodelist=cx01,cx02,cx03,cx04,cx05,cx06,cx07,cx08
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=72
+#SBATCH --time=36:00:00
+#SBATCH --container-image=/home/fabian/ubuntu22_04.sqsh
+#SBATCH --container-mounts=/home/fabian/Desktop/HiWi/DE-Lab-Base:/home/fabian/Desktop/HiWi/DE-Lab-Base
+#SBATCH --output=/home/fabian/Desktop/HiWi/DE-Lab-Base/results/test/INTEL2/output.log
+#SBATCH --error=/home/fabian/Desktop/HiWi/DE-Lab-Base/results/test/INTEL2/error.log
+
+
+bash /home/fabian/Desktop/HiWi/DE-Lab-Base/scripts/delab_benchmark_pipeline.sh INTEL2 testerino test 

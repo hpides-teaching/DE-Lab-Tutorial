@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --account=rabl
+#SBATCH --partition=sorcery
+#SBATCH --nodelist=gx03,gx04,gx05,gx06
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=48
+#SBATCH --time=36:00:00
+#SBATCH --container-image=/home/fabian/ubuntu22_04.sqsh
+#SBATCH --container-mounts=/home/fabian/Desktop/HiWi/DE-Lab-Base:/home/fabian/Desktop/HiWi/DE-Lab-Base
+#SBATCH --output=/home/fabian/Desktop/HiWi/DE-Lab-Base/results/test/AMD2/output.log
+#SBATCH --error=/home/fabian/Desktop/HiWi/DE-Lab-Base/results/test/AMD2/error.log
+
+
+bash /home/fabian/Desktop/HiWi/DE-Lab-Base/scripts/delab_benchmark_pipeline.sh AMD2 testerino test 

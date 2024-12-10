@@ -1,0 +1,2 @@
+add_library(benchmark_runner runtime_config.cpp perf_wrapper.cpp)
+target_link_libraries(benchmark_runner cxxopts nlohmann_json perf-cpp)
